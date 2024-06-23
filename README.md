@@ -1,3 +1,21 @@
+# Для запуска проекта
+Необходимо иметь Node.js v18.13, далее ввести следующие команды 
+
+`npm install`
+
+`ng serve`
+
+После запуска проект будет доступен по адресу `http://localhost:4200/`
+
+## Данные пользователей для входа
+Хранятся по пути [src/app/mock/users.mock.ts](https://github.com/AnastasiiaShirova/ngrx-project/blob/main/src/app/mock/users.mock.ts)
+
+## Тестовый пользователь
+Логин admin
+
+Пароль admin
+
+
 # AngularNgrx
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.

@@ -1,0 +1,22 @@
+<div class="login-container">
+  <p class="login-title">Authorization</p>
+  <form [formGroup]="loginForm" class="login-form">
+    <mat-form-field class="login-input">
+      <mat-label>Login</mat-label>
+      <input matInput formControlName="login">
+    </mat-form-field>
+
+    <mat-form-field class="login-input">
+      <mat-label>Password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+      <button mat-icon-button matSuffix (click)="clickEvent($event)" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="loginUser()"
+    >Sign in
+    </button>
+  </form>
+</div>
+

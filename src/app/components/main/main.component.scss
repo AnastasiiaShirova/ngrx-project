@@ -1,0 +1,18 @@
+* {
+  display: block;
+}
+
+.ticket-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.ticket-detail-list ::ng-deep .ticket-form__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-list {
+  width: 100%;
+}

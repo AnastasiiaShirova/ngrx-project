@@ -1,0 +1,39 @@
+<form [formGroup]="userForm" class="user-form">
+  <mat-form-field class="user-form__input">
+    <mat-label>id</mat-label>
+    <input matInput formControlName="id">
+  </mat-form-field>
+
+  <mat-form-field class="user-form__input">
+    <mat-label>login</mat-label>
+    <input matInput formControlName="login">
+  </mat-form-field>
+
+  <mat-form-field class="user-form__input">
+    <mat-label>name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="user-form__input">
+    <mat-label>surname</mat-label>
+    <input matInput formControlName="surname">
+  </mat-form-field>
+
+  <mat-form-field class="user-form__input">
+    <mat-label>date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="date">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="user-form__input">
+    <mat-label>city</mat-label>
+    <mat-select formControlName="city">
+      <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="editUser()"
+  >Save
+  </button>
+</form>

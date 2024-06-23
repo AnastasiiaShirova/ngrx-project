@@ -1,0 +1,6 @@
+<div class="ticket-container">
+<app-tickets-list [isTicketRouteDisabled]="true" class="ticket-list"></app-tickets-list>
+<div *ngIf="ticketFacade.ticket$ | async">
+  <app-tickets-detail [isDisabled]="true" class="ticket-detail-list"></app-tickets-detail>
+</div>
+</div>
